@@ -10,17 +10,17 @@ Once upon a time, a buddy (me) wanted to work more with embedded systems, so he 
 
 I realized this probably wouldn't fill the void in my heart to work on embedded systems, the likes of which I 'd rather run using C++ bare-metal, but it did spark my interest.
 
-![Slide01]()
+![Slide01](https://github.com/asa55/HelloRich/blob/master/slides/Slide01.png)
 
 My first thought was that if we're going to build something reliable that's wireless, we'll need something battery powered. That said, we don't want something that will drain the battery in a day. Also, if we built a custom wireless Tx/Rx system, we were at a high risk of false positives. This quickly became not as easy, but thanks to other smart people, there just had to be an existing solution we could base our project off of.
 
-![Slide02]()
+![Slide02](https://github.com/asa55/HelloRich/blob/master/slides/Slide02.png)
 
 I really wanted to use one of the main hobby electronics suppliers like sparkafruit or adafun, but the allure of 2 day shipping direct from Jeff Bezos was too great. It was vastly overkill. Somebody else already made a cheap and reliable door chime with a magnetic sensor that would ding every time you opened your door, and offered 52 pre-existing chimes (and obviously was less prone to battery draining and false-positives in the wee hours of the morning). Wow it would have been great if I could just overwrite their sounds with my own, but I didn't expect I'd be able to do that. So we went with the Parasyte (The Maxim) method and aimed to take over the brain of the chime with a Raspberry Pi. We opted for the Zero W model so that we could program it headless over WiFi and connect to an arbitrary Bluetooth speaker in case he really wanted to crank up the jamz in the future by connecting it to a more powerful speaker.
 
-![Slide03]()
+![Slide03](https://github.com/asa55/HelloRich/blob/master/slides/Slide03.png)
 
-![Slide04]()
+![Slide04](https://github.com/asa55/HelloRich/blob/master/slides/Slide04.png)
 
 The complete Bill of Materials (a.k.a. all the stuf we bought for this project or happened to have laying around) is all stuff you can find on Amazon, and is mostly swappable for similar components.
 
@@ -36,28 +36,28 @@ The complete Bill of Materials (a.k.a. all the stuf we bought for this project o
 
 * The most important two pieces I haven't mentioned yet are trimpots and photoresistors. You should be able to get packs of assorted potentiometers and photoresistors on Amazon. It doesn't much matter which ones you get becasue the trimpot is used to compensate for the sensitivity (or lack thereof) of your photoresistor. The photoresistor I used was about 10k ohms in normal lighting conditions and 2k ohms when I flashed the chime's light on it, while the potentiometer (a.k.a. trimpot in this case) spanned 0 to 10k ohms, set at about 5k ohms. I'll detail the electronics better in a sec.
 
-![Slide05]()
+![Slide05](https://github.com/asa55/HelloRich/blob/master/slides/Slide05.png)
 
 So we went about building the thing. We had lots of bad ideas along the way, so I'll only discuss the final build to avoid confusing myself any further.
 
 The work is broken down into the electrical portion of the work and the software portion of the work.
 On the electrical side:
 
-![Slide06]()
+![Slide06](https://github.com/asa55/HelloRich/blob/master/slides/Slide06.png)
 
 OK so I wasn't very specific as to how to connect this-to-that, but that's OK because the only things that matter for this part are that (1) you can use electrical tape to tape the photoresistor directly to the face of any LED (2) the wires have enough length to run out the side of any hle you drill in your chime to get to the GPIO pins of your Raspberry Pi (implying you've already soldered header pins onto your Pi - I used female connectors so that I could plug the wires into the Pi directly). I mentioned you could use any photoresistors you want but if you don't have any laying around get a variety pack from Amazon and use the largest ones they give you (for example, TrustYiwen assorted photoresistor kit), in addition to a 10k trimpot or anything that the max resistance of the trimpot approximately equals the resistance of your photoresistor in ambient lighting (not pointed at a light, but not intentionally covered - you can measure this with your multimeter). I personally love the kit I have from IC Touch - not sure if it's still available on Amazon sinc I got it a year or two ago but it's a hundred or so assorted pots that can plug into a breadboard, the kind that you need a tiny flathead screwdriver to adjust. Any kit will do, of course.
 
-![Slide07]()
+![Slide07](https://github.com/asa55/HelloRich/blob/master/slides/Slide07.png)
 
 So we built this voltage divider that relies on a few facts about the Pi... (1) the GPIO pin threshold between a logical 0 and a logical 1 is at about 1.2 volts. Also, the GPIO pins might break if you feed them more than 3.3V (a.k.a. 3V3). So we don't actually need the voltage present at the GPIO input to *be* 3V3 or 0V, we just need to cross the threshold. The way this is hooked up, we connected the photoresistor to the RasPi ground reference pin, so when the photodiode has a small resistance value compared to that of the potentiometer (about a third of the resistance), the voltage seen by the GPIO input will be less than the threshold voltage, and the Pi will interpret this as a logical 0. When the LED is not lit up, and the photoresistor has a relatively high value (about half of that of the potentiometer or more) we're safely above the threshold voltage and the RasPi will interpret this as a logical 1.
 
 If you're wondering why I picked the pin range I did, well it's because of this:
 
-![Slide08]()
+![Slide08](https://github.com/asa55/HelloRich/blob/master/slides/Slide08.png)
 
 We totally should have taken him up on that - my toddler-like attention span led us to this:
 
-![Slide09]()
+![Slide09](https://github.com/asa55/HelloRich/blob/master/slides/Slide09.png)
 
 On the software side:
 
@@ -124,4 +124,4 @@ Thanks for reading!
 
 Special shout out to Austin, who played the role of Third Buddy in the making of this instructacomic! Your support in identifying the electrical characteristics of the Pi and soundboarding ideas for how to connect it to the chime were greatly appreciated!
 
-![Slide10]()
+![Slide10](https://github.com/asa55/HelloRich/blob/master/slides/Slide10.png)
