@@ -6,7 +6,7 @@ A tale of two buddies, and a third buddy who deserved more credit on this projec
 
 Once upon a time, a buddy (me) wanted to work more with embedded systems, so he asked another buddy (Rich) for ideas. Here is what other buddy said:
 
-![Slide00]()
+![Slide00](https://github.com/asa55/HelloRich/blob/master/slides/Slide00.png)
 
 I realized this probably wouldn't fill the void in my heart to work on embedded systems, the likes of which I 'd rather run using C++ bare-metal, but it did spark my interest.
 
