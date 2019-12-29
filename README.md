@@ -2,7 +2,7 @@
 
 ## Check out the main project [blog post on MakerShare](https://makershare.com/projects/seinfeld-boobytrap-hello-rich)
 
-A tale of two buddies, and a third buddy who deserved more credit on this project
+# This is a tale of two buddies, and a third buddy who deserved more credit on this project
 
 Once upon a time, a buddy (me) wanted to work more with embedded systems, so he asked another buddy (Rich) for ideas. Here is what other buddy said:
 
@@ -41,7 +41,8 @@ The complete Bill of Materials (a.k.a. all the stuf we bought for this project o
 So we went about building the thing. We had lots of bad ideas along the way, so I'll only discuss the final build to avoid confusing myself any further.
 
 The work is broken down into the electrical portion of the work and the software portion of the work.
-On the electrical side:
+
+## On the electrical side:
 
 ![Slide06](https://github.com/asa55/HelloRich/blob/master/slides/Slide06.png)
 
@@ -59,7 +60,7 @@ We totally should have taken him up on that - my toddler-like attention span led
 
 ![Slide09](https://github.com/asa55/HelloRich/blob/master/slides/Slide09.png)
 
-On the software side:
+## On the software side:
 
 * In the Raspberry Pi kit you got an SD card - my laptop has an SD card writer build in (just some old HP laptop - nothing special) . If your PC doesn't have this you can buy an SD card writer on Amazon (like the Anker for less than $10).
 
@@ -125,3 +126,32 @@ Thanks for reading!
 Special shout out to Austin, who played the role of Third Buddy in the making of this instructacomic! Your support in identifying the electrical characteristics of the Pi and soundboarding ideas for how to connect it to the chime were greatly appreciated!
 
 ![Slide10](https://github.com/asa55/HelloRich/blob/master/slides/Slide10.png)
+
+
+
+# Super Thanks!
+As a super-thanks for visiting my GitHub, you can see some images here of the finished product that aren't on the MakerShare blog post:
+
+Here's an extreme close-up of the photoresistor
+
+![Photoresistor Extreme Closeup](https://github.com/asa55/HelloRich/blob/master/images/P_20191227_155814_p.jpg)
+
+Here's me holding the photoresistor against an LED inside the chime during testing
+
+![Photoresistor and Chime, LED OFF](https://github.com/asa55/HelloRich/blob/master/images/P_20191227_155906_p.jpg)
+
+Here's another one with the LED blinking
+
+![Photoresistor and Chime, LED ON](https://github.com/asa55/HelloRich/blob/master/images/P_20191227_155908_p.jpg)
+
+Here's one of how I wired the Raspberry Pi (the purple leads both come off of the potentiometer, the yellow lead is one of the legs of the photoresistor)
+
+![Pi Wiring](https://github.com/asa55/HelloRich/blob/master/images/P_20191227_214014_p.jpg)
+
+Here's one of the complete assembly - the inside is a mess but the basic idea is I ran the wires and cleaned it up for the finished product. Don't hesitate to mangle the chime, I sure didn't!
+
+![Complete Assembly](https://github.com/asa55/HelloRich/blob/master/images/P_20191228_230435_p.jpg)
+
+There is also a 7 second video of the project in operation in the "images" folder. I realize this is a misnomer. I'll link it here, but I'm almost certain GitHub MarkDown doesn't support embedding videos this way...
+
+![Video of the complete working project](https://github.com/asa55/HelloRich/blob/master/images/V_20191227_223041_N0.mp4)
