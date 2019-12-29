@@ -152,6 +152,6 @@ Here's one of the complete assembly - the inside is a mess but the basic idea is
 
 ![Complete Assembly](https://github.com/asa55/HelloRich/blob/master/images/P_20191228_230435_p.jpg)
 
-There is also a 7 second video of the project in operation in the "images" folder. I realize this is a misnomer. I'll link it here, but I'm almost certain GitHub MarkDown doesn't support embedding videos this way...
+There is also a 7 second video of the project in operation in the "images" folder. I realize this is a misnomer. I linked it here but since GitHub MarkDown doesn't support embedding videos in this way, you can just follow the link to download the vid. (It's only 14 MB or so)
 
 ![Video of the complete working project](https://github.com/asa55/HelloRich/blob/master/images/V_20191227_223041_N0.mp4)
