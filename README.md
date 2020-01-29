@@ -2,7 +2,7 @@
 
 ## Check out the main project [blog post on MakerShare](https://makershare.com/projects/seinfeld-boobytrap-hello-rich)
 
-# This is a tale of two buddies, and a third buddy who deserved more credit on this project
+# This is a tale of two buddies, and a third buddy we should have listened to
 
 Once upon a time, a buddy (me) wanted to work more with embedded systems, so he asked another buddy (Rich) for ideas. Here is what other buddy said:
 
